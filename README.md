@@ -1,5 +1,7 @@
 # Online Retail Sales Analysis
 
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Brutva/online-retail-analysis/blob/main/notebooks/online_retail_analysis.ipynb)
+
 Business-oriented exploratory data analysis of real transaction data from a UK-based online retailer. The project examines revenue trends, product performance, cancellations, geographic markets, and customer behavior to produce practical business recommendations.
 
 ## Project objective
@@ -117,8 +119,11 @@ online-retail-analysis/
 │   ├── international_cancellation_rate.png
 │   ├── customer_segment_comparison.png
 │   └── top_customers_by_net_revenue.png
-├── online_retail_analysis.ipynb
-└── README.md
+├── notebooks/
+│   └── online_retail_analysis.ipynb
+├── .gitignore
+├── README.md
+└── requirements.txt
 ```
 
 ## How to run the project
@@ -132,7 +137,7 @@ online-retail-analysis/
    MyDrive/online-retail-analysis/data/online_retail.xlsx
    ```
 
-3. Open `online_retail_analysis.ipynb` in Google Colab.
+3. Open `notebooks/online_retail_analysis.ipynb` in Google Colab or use the **Open in Colab** button at the top of this README.
 4. Allow Colab to connect to Google Drive when requested.
 5. Select **Runtime → Run all**.
 
@@ -143,7 +148,13 @@ The generated charts will be saved to `MyDrive/online-retail-analysis/images/`.
 Install the required packages:
 
 ```bash
-pip install pandas matplotlib seaborn openpyxl jupyter
+pip install -r requirements.txt
+```
+
+Start Jupyter from the repository root:
+
+```bash
+jupyter notebook
 ```
 
 The first notebook cell is configured for Google Colab. For local execution, remove the Google Drive import and mount commands, then use:
@@ -173,4 +184,3 @@ Place the dataset in `data/online_retail.xlsx` and run all notebook cells.
 ## Dataset attribution
 
 Chen, D. (2015). *Online Retail* [Dataset]. UCI Machine Learning Repository. [https://doi.org/10.24432/C5BW33](https://doi.org/10.24432/C5BW33). Licensed under CC BY 4.0.
-
